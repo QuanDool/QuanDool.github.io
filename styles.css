@@ -2,3 +2,52 @@
     margin: 0;
     padding: 0;
 }
+
+html {
+    padding-left: 15rem;
+    padding-right: 15rem;
+    min-width: 480px;
+}
+
+@media only screen and (max-width: 1080px) {
+    html {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    html {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+body {
+    height: 100vh;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-top: 2rem;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    align-items: baseline;
+}
+
+nav h1 {
+    width: fit-content;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    gap: 1rem   
+}
+
+nav ul li {
+    display: inline;
+}
