@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Comme:wght@400;700&display=swap");
+
+:root {
+	--text-color: hsl(215, 25%, 25%);
+	--text-color-hover: hsl(215, 25%, 50%);
+	--nav-height: ;
+}
+
+body {
+	color: var(--text-color);
+	font-family: "Comme", Arial, Helvetica, sans-serif;
+}
+
+nav {
+	position: fixed;
+	width: 100vw;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.5rem 1rem;
+	border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 480px) {
+	nav {
+		padding: 1.5rem 5rem;
+	}
+}
+
+@media screen and (min-width: 720px) {
+	nav {
+		padding: 1.5rem 7.5rem;
+	}
+}
+
+@media screen and (min-width: 1080px) {
+	nav {
+		padding: 1.5rem 15rem;
+	}
+}
+
+.nav-name {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.nav-links {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	gap: 3rem;
+	font-size: large;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 720px) {
+	.nav-links {
+		display: none;
+	}
+}
+
+.nav-links li a:hover {
+	color: var(--text-color-hover);
+	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
