@@ -1,14 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Comme:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comme:wght@400;500;600;700&display=swap");
 
 :root {
-	--text-color: hsl(215, 25%, 25%);
-	--text-color-hover: hsl(215, 25%, 50%);
-	--nav-height: ;
+	--text-color: hsl(221, 39%, 11%);
+	--text-color-hover: hsl(221, 39%, 41%);
+	--banner-background: hsl(100, 100%, 99%);
+	--nav-height: 5rem;
+	--padding: 1rem;
+	--celestial-blue: hsl(204, 69%, 50%);
+	--number-characters: 10;
+	--typing-duration: 3s;
+	--typing-step: 10;
 }
 
 body {
 	color: var(--text-color);
 	font-family: "Comme", Arial, Helvetica, sans-serif;
+	background-color: var(--banner-background);
 }
 
 nav {
@@ -18,25 +25,28 @@ nav {
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1.5rem 1rem;
-	border-bottom: 1px solid black;
+	padding: 0 var(--padding);
+	height: var(--nav-height);
+	z-index: 10;
+	background-color: transparent;
+	border-bottom: 1px solid var(--text-color);
 }
 
 @media screen and (min-width: 480px) {
-	nav {
-		padding: 1.5rem 5rem;
+	:root {
+		--padding: 5rem;
 	}
 }
 
 @media screen and (min-width: 720px) {
-	nav {
-		padding: 1.5rem 7.5rem;
+	:root {
+		--padding: 7.5rem;
 	}
 }
 
 @media screen and (min-width: 1080px) {
-	nav {
-		padding: 1.5rem 15rem;
+	:root {
+		--padding: 15rem;
 	}
 }
 
@@ -63,4 +73,69 @@ nav {
 .nav-links li a:hover {
 	color: var(--text-color-hover);
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.banner {
+	position: relative;
+	top: var(--nav-height);
+	left: 0;
+	padding: 5rem var(--padding) 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: 5rem;
+}
+
+.banner .image-container {
+	background-color: transparent;
+	width: 30rem;
+	overflow: hidden;
+}
+
+.banner .image-container img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+@media screen and (max-width: 720px) {
+}
+
+.banner .introduction {
+	width: 30rem;
+}
+
+.banner .introduction h2 {
+	color: var(--celestial-blue);
+	margin-bottom: 1rem;
+	font-weight: bold;
+	font-size: 5rem;
+}
+
+.banner .introduction section {
+	width: 100%;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+.university {
+	color: hsl(264, 52%, 34%);
+}
+
+.banner .introduction section p {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+@keyframes cursor {
+	50% {
+		border-color: black;
+	}
+}
+
+@keyframes type {
+	0% {
+		color: transparent;
+	}
 }
