@@ -4,26 +4,32 @@ export default function NavBar() {
 			<a className="cursor-pointer">
 				<h3 className="text-2xl font-bold">Quan Pham</h3>
 			</a>
-			<div className="flex items-center justify-evenly gap-6 font-bold">
-				<a
-					className="transition-colors duration-300 hover:text-gray-500"
-					href=""
-				>
-					Home
-				</a>
-				<a
-					className="transition-colors duration-300 hover:text-gray-500"
-					href=""
-				>
-					Work
-				</a>
-				<a
-					className="transition-colors duration-300 hover:text-gray-500"
-					href=""
-				>
-					About
-				</a>
-			</div>
+			<ul className="flex items-center justify-evenly gap-6 font-bold">
+				<li>
+					<a
+						className="transition-colors duration-300 hover:text-gray-500"
+						href=""
+					>
+						Home
+					</a>
+				</li>
+				<li>
+					<a
+						className="transition-colors duration-300 hover:text-gray-500"
+						href=""
+					>
+						Work
+					</a>
+				</li>
+				<li>
+					<a
+						className="transition-colors duration-300 hover:text-gray-500"
+						href=""
+					>
+						About
+					</a>
+				</li>
+			</ul>
 		</nav>
 	);
 }
