@@ -18,6 +18,7 @@ body {
 	background-color: var(--banner-background);
 }
 
+/* NavBar */
 nav {
 	position: fixed;
 	width: 100vw;
@@ -40,7 +41,7 @@ nav {
 
 @media screen and (min-width: 720px) {
 	:root {
-		--padding: 7.5rem;
+		--padding: 2rem;
 	}
 }
 
@@ -78,6 +79,7 @@ nav {
 	transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+/* Banner */
 .banner {
 	position: relative;
 	top: var(--nav-height);
