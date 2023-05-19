@@ -28,13 +28,13 @@ nav {
 	padding: 0 var(--padding);
 	height: var(--nav-height);
 	z-index: 10;
-	background-color: transparent;
+	background-color: var(--banner-background);
 	border-bottom: 1px solid var(--text-color);
 }
 
 @media screen and (min-width: 480px) {
 	:root {
-		--padding: 5rem;
+		--padding: 0rem;
 	}
 }
 
@@ -68,6 +68,9 @@ nav {
 	.nav-links {
 		display: none;
 	}
+	nav {
+		justify-content: center;
+	}
 }
 
 .nav-links li a:hover {
@@ -79,12 +82,13 @@ nav {
 	position: relative;
 	top: var(--nav-height);
 	left: 0;
-	padding: 5rem var(--padding) 0;
+	padding: 7.5rem calc(var(--padding) / 2);
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	column-gap: 5rem;
+	border-bottom: 1px solid black;
 }
 
 .banner .image-container {
@@ -99,9 +103,6 @@ nav {
 	display: block;
 }
 
-@media screen and (max-width: 720px) {
-}
-
 .banner .introduction {
 	width: 30rem;
 }
@@ -111,12 +112,13 @@ nav {
 	margin-bottom: 1rem;
 	font-weight: bold;
 	font-size: 5rem;
+	animation: type 6s;
 }
 
 .banner .introduction section {
 	width: 100%;
 	font-weight: 500;
-	font-size: 3rem;
+	font-size: 2.8rem;
 }
 
 .university {
@@ -126,6 +128,12 @@ nav {
 .banner .introduction section p {
 	display: inline-block;
 	white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+	.banner .introduction section p {
+		white-space: normal;
+	}
 }
 
 @keyframes cursor {
