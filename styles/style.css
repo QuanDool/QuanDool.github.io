@@ -18,26 +18,17 @@ body {
 
 /* NavBar */
 nav {
-	position: fixed;
+	position: sticky;
 	inset: 0;
-	width: 100vw;
-
-	height: var(--nav-height);
-	z-index: 10;
-	background-color: var(--background);
-	border-bottom: 1px solid var(--text-color);
-}
-
-.nav-container {
-	max-width: 1280px;
-	height: 100%;
-	overflow: hidden;
-	margin: 0 auto;
-	padding: 0 2rem;
 
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
+
+	height: var(--nav-height);
+	z-index: 10;
+	background-color: var(--background);
+	/* border-bottom: 1px solid var(--text-color); */
 }
 
 .nav-name {
@@ -71,15 +62,16 @@ nav {
 
 /* Banner */
 .banner {
-	position: relative;
-	top: var(--nav-height);
-	left: 0;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 	column-gap: 5rem;
 	border-bottom: 1px solid black;
+}
+
+.banner .nav-gap {
+	height: var(--nav-height);
 }
 
 .banner .image-container {
