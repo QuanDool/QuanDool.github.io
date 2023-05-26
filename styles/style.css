@@ -20,6 +20,7 @@ body {
 nav {
 	position: sticky;
 	inset: 0;
+	padding: 0 2rem;
 
 	display: flex;
 	flex-flow: row nowrap;
@@ -38,10 +39,13 @@ nav {
 }
 
 .nav-links {
+	padding: 1rem;
+
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	gap: 3rem;
+
 	font-size: large;
 	font-weight: bold;
 }
@@ -52,6 +56,9 @@ nav {
 	}
 	nav {
 		justify-content: center;
+	}
+	.nav-name {
+		text-align: center;
 	}
 }
 
