@@ -46,6 +46,7 @@ nav {
 	justify-content: space-between;
 	gap: 3rem;
 
+	text-transform: uppercase;
 	font-size: large;
 	font-weight: bold;
 }
@@ -70,34 +71,26 @@ nav {
 /* Banner */
 .banner {
 	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	align-items: center;
-	column-gap: 5rem;
-	border-bottom: 1px solid black;
-}
-
-.banner .nav-gap {
-	height: var(--nav-height);
-}
-
-.banner .image-container {
-	background-color: transparent;
-	width: 30rem;
 	overflow: hidden;
 }
 
-.banner .image-container img {
+.banner-image {
+	flex: 1.25;
+}
+
+.banner-image img {
 	max-width: 100%;
-	height: auto;
-	display: block;
+	height: 100%;
+	object-fit: contain;
 }
 
-.banner .introduction {
-	width: 30rem;
+.banner-introduction {
+	padding: 4rem 2rem;
+	flex: 1;
+	max-width: 40rem;
 }
 
-.banner .introduction h2 {
+.banner-introduction h2 {
 	color: var(--celestial-blue);
 	margin-bottom: 1rem;
 	font-weight: bold;
@@ -105,7 +98,7 @@ nav {
 	animation: type 6s;
 }
 
-.banner .introduction section {
+.banner-introduction section {
 	width: 100%;
 	font-weight: 500;
 	font-size: 2.8rem;
@@ -115,14 +108,21 @@ nav {
 	color: hsl(264, 52%, 34%);
 }
 
-.banner .introduction section p {
+.banner-introduction section p {
 	display: inline-block;
-	white-space: nowrap;
+	white-space: pre-wrap;
 }
 
 @media screen and (max-width: 480px) {
-	.banner .introduction section p {
+	.banner-introduction section p {
 		white-space: normal;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.banner {
+		flex-direction: column;
+		align-items: center;
 	}
 }
 

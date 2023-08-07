@@ -1,4 +1,4 @@
-const lines = document.querySelectorAll(".banner .introduction section p");
+const lines = document.querySelectorAll(".banner-introduction section p");
 let characterIndex = 0;
 let characterLength = 0;
 let characterLists = [];
@@ -36,6 +36,6 @@ function createCharacterSpan(character) {
 	const span = document.createElement("span");
 	span.innerHTML = character;
 	span.style.borderRight = "2px solid transparent";
-	span.style.animation = "type 0.05s paused";
+	span.style.animation = "type 0.5s paused";
 	return span;
 }
